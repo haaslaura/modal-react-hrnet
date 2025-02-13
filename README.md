@@ -1,6 +1,6 @@
 # modal-react-laurahaas
 
-**modal-react-laurahaas** is a React component that displays a modal window after a form has been submitted.
+**modal-react-laurahaas** is a React component that displays a modal window after a form has been submitted. The modal will be closed by clicking on the "close" button or by clicking outside the modal. You can customise the form submission function.
 
 ## 📦 Installation
 
@@ -29,6 +29,7 @@ const App = () => {
 
     /**
      * Toggles the dialog modal open or closed
+     * Closes the modal when clicked externally
      */
     const dialogRef = useRef(null)
     const toggleDialog= () => {
@@ -37,12 +38,22 @@ const App = () => {
         }
         dialogRef.current.hasAttribute("open")
             ? dialogRef.current.close()
-            : dialogRef.current.showModal()
-    }
+            : dialogRef.current.showModal();
+    };
+
+    /**
+     * Customise the function you want to use when sending your form
+     */
+    const sendingFonction = (e) => {
+    e.preventDefault();
+    console.log("Information sent!");
+    toggleDialog();
+    
+  }
     
     return (
     <div>
-        <form>
+        <form onSubmit={sendingFonction}>
             <div>
                 <label htmlFor="first-field">First Field</label>
                 <input type="text" id="first-field" />
@@ -50,7 +61,11 @@ const App = () => {
             <button className="save-button" type="submit">Save</button>
         </form>
         
-        <Dialog toggleDialog={toggleDialog} ref={dialogRef} />
+        <Dialog
+            toggleDialog={toggleDialog}
+            ref={dialogRef}
+            textModal="My modal content"
+        />
     </div>
   );
 };
@@ -64,6 +79,7 @@ export default App;
 | -------------- |:-----------:| ---------------------------------------:|
 | `toggleDialog` | `function`  | Function to toggle the modal visibility |
 | `dialogRef`    | `React ref` | Reference to the dialog element         |
+| `textModal`    | `string`    | The text content of your modal          |
 
 ## 🎨 Personnalisation
 The dialog.css file can be modified to adapt the style of the modal to your application.
