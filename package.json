@@ -1,0 +1,15 @@
+{
+  "name": "modal-react-laurahaas",
+  "version": "0.1.2",
+  "description": "Dialog react component for displaying a modal window following completion of a form",
+  "license": "ISC",
+  "author": "Laura Haas",
+  "type": "commonjs",
+  "module": "Dialog.jsx",
+  "main": "Dialog.jsx",
+  "private": false,
+  "files": ["Dialog/**/*", "dialog.css", "ModalContent.jsx", "README.md"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
