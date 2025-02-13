@@ -86,7 +86,7 @@ The dialog.css file can be modified to adapt the style of the modal to your appl
 
 Example :
 ```css
-.modal {
+.hl-modal {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 20px;
