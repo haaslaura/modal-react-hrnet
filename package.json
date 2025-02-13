@@ -1,12 +1,13 @@
 {
   "name": "modal-react-laurahaas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Dialog react component for displaying a modal window following completion of a form",
   "keywords": [
     "modal",
     "dialog",
-    "react"
+    "react", 
+    "form"
   ],
   "homepage": "https://github.com/haaslaura/modal-react-hrnet#readme",
   "bugs": {
@@ -23,7 +24,6 @@
   "files": [
     "Dialog/**/*",
     "dialog.css",
-    "ModalContent.jsx",
     "README.md"
   ],
   "scripts": {

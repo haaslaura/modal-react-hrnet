@@ -44,16 +44,15 @@ const App = () => {
     /**
      * Customise the function you want to use when sending your form
      */
-    const sendingFonction = (e) => {
+    const sendingFunction = (e) => {
     e.preventDefault();
     console.log("Information sent!");
     toggleDialog();
-    
   }
     
     return (
     <div>
-        <form onSubmit={sendingFonction}>
+        <form onSubmit={sendingFunction}>
             <div>
                 <label htmlFor="first-field">First Field</label>
                 <input type="text" id="first-field" />
@@ -81,6 +80,7 @@ export default App;
 | `dialogRef`    | `React ref` | Reference to the dialog element         |
 | `textModal`    | `string`    | The text content of your modal          |
 
+&nbsp;
 ## 🎨 Personnalisation
 The dialog.css file can be modified to adapt the style of the modal to your application.
 
@@ -95,8 +95,8 @@ Example :
 ```
 
 The css classes available are :
-- `.modal {}`
-- `::backdrop {}`, `.modal-content {}` (text inside the modal)
-- `.modal-close-button {}`
-- `.modal-close-button:hover {}` (for the hover background color)
-- `.modal-close-button::before {}` (the x icon)
+- `.hl-modal {}`
+- `::backdrop {}`, `.hl-modal-content {}` (text inside the modal)
+- `.hl-modal-close-button {}`
+- `.hl-modal-close-button:hover {}` (for the hover background color)
+- `.hl-modal-close-button::before {}` (the x icon)
