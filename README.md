@@ -45,9 +45,9 @@ const App = () => {
      * Customise the function you want to use when sending your form
      */
     const sendingFunction = (e) => {
-    e.preventDefault();
-    console.log("Information sent!");
-    toggleDialog();
+        e.preventDefault();
+        console.log("Information sent!");
+        toggleDialog();
     }
     
     return (
