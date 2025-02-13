@@ -1,6 +1,6 @@
 {
   "name": "modal-react-laurahaas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "Dialog react component for displaying a modal window following completion of a form",
   "keywords": [
