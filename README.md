@@ -48,7 +48,7 @@ const App = () => {
     e.preventDefault();
     console.log("Information sent!");
     toggleDialog();
-  }
+    }
     
     return (
     <div>
